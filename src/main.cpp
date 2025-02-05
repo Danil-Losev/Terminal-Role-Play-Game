@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
   int error = 0;
   error = checkFiles(fileArray, mainFilesCount);
   if (error == 0) {
-    loadProfile(SETTINGS_PATH + "settingst.txt", settings);
+    loadProfile(SETTINGS_PATH + "settings.txt", settings);
     mainMenu();
   } else {
     std::cerr << "ERROR: Files not found" << '\n';

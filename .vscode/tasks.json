@@ -1,0 +1,267 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build C++ file: g++.exe",
+            "command": "C:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "close": false,
+            },
+            "detail": "Building C++ program with g++ compiler"
+        },
+        //
+        {
+            "type": "shell",
+            "label": "Build and run C++ file",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": true,
+                "panel": "dedicated", // "shared" or "dedicated"
+                "showReuseMessage": true,
+                "clear": false,
+            },
+            "dependsOn": [
+                "Build C++ file: g++.exe"
+            ],
+            "detail": "Building and running C++ file using g++ compiler"
+        },
+        //
+        {
+            "type": "shell",
+            "label": "Run C++ file",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": true,
+                "panel": "dedicated", // "shared" or "dedicated"
+                "showReuseMessage": true,
+                "clear": false,
+            },
+            "detail": "Running C++ file "
+        },
+        //
+        {
+            "type": "shell",
+            "label": "Cleanup .exe file",
+            "command": "rm",
+            "args": [
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "clear": true,
+                "close": true
+            },
+            "detail": "Cleaning up.exe file",
+            "problemMatcher": []
+        },
+        //
+        {
+            "type": "cppbuild",
+            "label": "Build C++ with msoftcon: g++.exe",
+            "command": "C:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-g",
+                "${file}",
+                "${workspaceFolder}\\Object-Oriented-Programming-in-C++\\msoftcon\\*.cpp",
+                "-I${workspaceFolder}\\Object-Oriented-Programming-in-C++\\msoftcon\\",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "close": false,
+            },
+            "detail": "Building C++ program with g++ compiler and msoftcon "
+        },
+        //
+        {
+            "type": "shell",
+            "label": "Build and run C++ file with msoftcon",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": true,
+                "panel": "dedicated", // "shared" or "dedicated"
+                "showReuseMessage": true,
+                "clear": false,
+            },
+            "dependsOn": [
+                "Build C++ with msoftcon: g++.exe"
+            ],
+            "detail": "Building and running C++ file with msoftcon using g++ compiler"
+        },
+        //
+        {
+            "type": "cppbuild",
+            "label": "Build C++ multi-file project : g++.exe",
+            "command": "C:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-g",
+                "${fileDirname}\\*.cpp",
+                "-I${fileDirname}\\",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true,
+                "close": false,
+            },
+            "detail": "Building C++ multi-file project with g++ compiler "
+        },
+        //
+        {
+            "type": "shell",
+            "label": "Build and run C++ multi-file project file ",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": true,
+                "panel": "dedicated", // "shared" or "dedicated"
+                "showReuseMessage": true,
+                "clear": false,
+            },
+            "dependsOn": [
+                "Build C++ multi-file project : g++.exe"
+            ],
+            "detail": "Building and running C++ multi-file project file using g++ compiler"
+        },
+        //
+        {
+            "type": "cppbuild",
+            "label": "Build C++ file with graphics : g++.exe ",
+            "command": "C:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-lbgi",
+                "-lgdi32",
+                "-lcomdlg32",
+                "-luuid",
+                "-loleaut32",
+                "-lole32"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Building C++ file with graphics using g++ compiler"
+        },
+    ],
+}
