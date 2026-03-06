@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-const std::string PROJECT_PATH = "D:\\Code\\project\\";
+const std::string PROJECT_PATH = "C:\\Users\\user\\Documents\\GitHub\\Terminal-Role-Play-Game\\";
 const std::string PERSONS_PATH = PROJECT_PATH + "persons\\";
 const std::string SETTINGS_PATH = PROJECT_PATH + "settings\\";
 
